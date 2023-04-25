@@ -32,7 +32,7 @@
     </v-app-bar>
     <v-main class="v-main">
 		<div class="v-main__wrap">
-			<v-container>
+			<v-container class="flex-nowrap">
 				<slot />
 			</v-container>
 		</div>
