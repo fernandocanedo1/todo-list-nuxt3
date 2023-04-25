@@ -7,7 +7,7 @@ export const light: ThemeDefinition = {
   dark: true,
   colors: {
     background: "#FFFFFF",
-    surface: "#FFFFFF",
+    surface: "#363636",
     primary: twColors.gray[600],
     secondary: twColors.gray[600],
     error: twColors.gray[500],
