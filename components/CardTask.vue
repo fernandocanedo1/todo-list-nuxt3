@@ -1,16 +1,20 @@
 <template>
-  <v-card variant="outlined">
+  <v-card variant="outlined" :class=" card.checked ? 'checked-true' : ''">
     <v-checkbox 
       v-model="card.checked"
       @input="task.checkItem(card.name, card.checked)"
-      color="success" 
+      color="" 
+      :class=" card.checked ? 'checked-true' : ''"
       hide-details>
     </v-checkbox>
     <v-card-item>
       <div>
-        <div class="text-overline mb-1" v-if="card.checked==true">COMPLETO</div>
-        <div class="text-overline mb-1" v-else>EM ANDAMENTO</div>
-        <div class="text-h6 mb-1">{{ card.name }}</div>
+        <div :class="[
+          'text-overline mb-1 ',
+          card.checked ? 'checked-true' : '' 
+        ]" v-if="card.checked==true">TAREFA COMPLETA</div>
+        <div class="text-overline mb-1" v-else>TAREFA EM ANDAMENTO</div>
+        <div class="text-h3 mb-1">{{ card.name }}</div>
         <div class="text-caption line-clamp-2">{{ card.description }}</div>
       </div>
     </v-card-item>
@@ -25,6 +29,7 @@ import { useCardStore } from "/stores/card.ts";
 export default defineComponent({
   props: {
     card: Object,
+    
   },
   setup() {
     const task = useCardStore();
@@ -32,3 +37,12 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+.checked-true{
+  color: white !important;
+  background-color: #50C878 !important;
+}
+.text-h3{
+  text-transform: capitalize;
+}
+</style>
