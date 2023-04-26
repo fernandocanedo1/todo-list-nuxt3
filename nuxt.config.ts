@@ -9,6 +9,8 @@ export default defineNuxtConfig({
   // enable takeover mode
   build: { transpile: ["vuetify"] },
   modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     "@kevinmarrec/nuxt-pwa",
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) =>

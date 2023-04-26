@@ -12,11 +12,14 @@
     "@iconify/vue": "^4.1.1",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxtjs/google-fonts": "^3.0.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "nuxt": "3.4.2",
     "sass": "^1.62.0",
     "vuetify": "^3.1.15"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.9",
+    "pinia": "^2.0.35",
     "vite-plugin-vuetify": "^1.0.2"
   }
 }

@@ -1,27 +1,23 @@
 <template>
   <v-row>
-    <v-col max-width="200px" v-for="(card, index) in items.slice().reverse()" :key="index" cols="12" md="4" lg="3">
-      <CardTask :card=card :index=index />
+    <v-col max-width="200px" v-for="card in card.items.slice().reverse()" :key="card.name" cols="12" md="4" lg="3">
+      <CardTask :card=card />
     </v-col>
   </v-row>
 </template>
 
-<script >
+<script lang="ts" >
+import { defineComponent} from "vue";
+import { useCardStore } from "@/stores/card.ts";
 import  CardTask  from '@/components/CardTask';
-export default {
+
+export default defineComponent({
   components: {CardTask},
-  data() {
-    return {
-      items: [
-        { title: "Comprar leite", description: "Leite desnatado", done: false, checked: false },
-        { title: "Pagar a conta de luz", description: "Conta vencida em 15/04", checked: true },
-        { title: "Ligar para o médico", description: "Agendar consulta", checked: false },
-        { title: "1", description: "Agendar consulta", checked: true },
-        { title: "Ligar para o médico", description: "Agendar consulta", checked: false },
-      ],
-    };
-  },
-};
+  setup() {
+    const card = useCardStore();
+    return{card}
+  }
+});
 </script>
 <style>
 

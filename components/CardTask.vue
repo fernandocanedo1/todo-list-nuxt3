@@ -4,7 +4,7 @@
     <v-card-item>
       <div>
         <div class="text-overline mb-1">COMPLETO</div>
-        <div class="text-h6 mb-1">{{ card.title }}</div>
+        <div class="text-h6 mb-1">Teste titulo</div>
         <div class="text-caption line-clamp-2">
           Greyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfully
         </div>
@@ -12,20 +12,19 @@
     </v-card-item>
     <v-card-actions class="d-flex justify-end">
       <!-- <v-btn variant="outlined"> Button </v-btn> -->
-      <v-btn text @click="deleteCard(index)">Delete</v-btn>
+      <v-btn text @click="deleteCard">Delete</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 <script>
 export default defineComponent({
   props: {
-    card: Object,
-    index: Number
+    card: Object
   },
   setup() {},
   methods: {
-    deleteCard(index) {
-      console.log("deleted:" +index);
+    deleteCard() {
+      console.log("deleted:" );
     },
   },
 });

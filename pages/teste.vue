@@ -1,3 +1,12 @@
 <template>
-    <h1>TESTE</h1>
+  teste
 </template>
+  
+  <script lang="ts">
+
+</script>
+  
+  <style>
+
+</style>
+  
