@@ -14,7 +14,7 @@
           card.checked ? 'checked-true' : '' 
         ]" v-if="card.checked==true">TAREFA COMPLETA</div>
         <div class="text-overline mb-1" v-else>TAREFA EM ANDAMENTO</div>
-        <div class="text-h3 mb-1">{{ card.name }}</div>
+        <div class="text-h4 mb-1">{{ card.name }}</div>
         <div class="text-caption line-clamp-2">{{ card.description }}</div>
       </div>
     </v-card-item>
@@ -42,7 +42,7 @@ export default defineComponent({
   color: white !important;
   background-color: #50C878 !important;
 }
-.text-h3{
-  text-transform: capitalize;
+.text-h4::first-letter{
+  text-transform:capitalize !important;
 }
 </style>
