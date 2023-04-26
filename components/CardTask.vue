@@ -4,10 +4,8 @@
     <v-card-item>
       <div>
         <div class="text-overline mb-1">COMPLETO</div>
-        <div class="text-h6 mb-1">Teste titulo</div>
-        <div class="text-caption line-clamp-2">
-          Greyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfullyGreyhound divisely hello coldly fonwderfully
-        </div>
+        <div class="text-h6 mb-1">{{ card.name }}</div>
+        <div class="text-caption line-clamp-2">{{card.description}}</div>
       </div>
     </v-card-item>
     <v-card-actions class="d-flex justify-end">

@@ -74,13 +74,13 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Home',
+          title: 'Lista de Tarefas',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Teste',
-          to: '/teste'
+          title: 'Registrar Tarefas',
+          to: '/registertask'
         }
       ],
       title: 'Lista de Tarefas'
