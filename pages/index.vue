@@ -1,7 +1,7 @@
 <template>
   <v-row>
-    <v-col max-width="200px" v-for="card in card.items.slice().reverse()" :key="card.name" cols="12" md="4" lg="3">
-      <CardTask :card=card />
+    <v-col max-width="200px" v-for="index in card.items.slice().reverse()" :key="index.name" cols="12" md="4" lg="3">
+      <CardTask :card=index />
     </v-col>
   </v-row>
 </template>

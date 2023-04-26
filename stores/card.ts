@@ -3,13 +3,7 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 export const useCardStore = defineStore({
   id: 'card',
   state: () => ({
-    tasks: [
-      {
-        name: 'exemplo1',
-        description: 'descrição',
-        checked: false,
-      }
-    ] as Array<{ name: string; description: string; checked: boolean }>,
+    tasks: [] as Array<{ name: string; description: string; checked: boolean }>,
   }),
   getters: {
     items: (state): Array<{ name: string; description: string; checked: boolean }> =>
@@ -26,6 +20,12 @@ export const useCardStore = defineStore({
     removeItem(name: string) {
       const i = this.tasks.findIndex(item => item.name === name)
       if (i > -1) this.tasks.splice(i, 1)
+    },
+    checkItem(name: string, checked: boolean) {
+      const task = this.tasks.find(item => item.name === name)
+      if (task) {
+        task.checked = checked
+      }
     },
   },
   persist: true,
