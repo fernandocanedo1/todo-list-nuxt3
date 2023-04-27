@@ -1,8 +1,9 @@
 <template>
   <form @submit.prevent="addItemToCard" data-testid="add-items">
     <H1>Informe os dados:</H1><br />
-    <v-text-field v-model="itemName" label="Nome" required />
+    <v-text-field name="Name" v-model="itemName" label="Nome" required />
     <v-textarea
+    name="Decription"
       v-model="itemDescription"
       clearable
       clear-icon="mdi-close-circle"

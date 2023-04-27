@@ -1,6 +1,7 @@
 <template>
   <v-card variant="outlined" :class="card.checked ? 'checked-true' : ''">
     <v-checkbox
+      name="checked"
       v-model="card.checked"
       @input="task.checkItem(card.name, card.checked)"
       color=""
@@ -9,7 +10,7 @@
     >
     </v-checkbox>
     <v-card-item>
-      <NuxtLink :to="'/task/' + indexCard">
+      <NuxtLink  name="linkTask" :to="'/task/' + indexCard">
         <div>
           <div
             :class="['text-overline mb-1 ', card.checked ? 'checked-true' : '']"
@@ -24,7 +25,7 @@
       </NuxtLink>
     </v-card-item>
     <v-card-actions class="d-flex justify-end">
-      <v-btn text @click="removeItem()">Delete</v-btn>
+      <v-btn name="delete" text @click="removeItem()">Delete</v-btn>
     </v-card-actions>
   </v-card>
   <Toast msg="Tarefa deletada" />
