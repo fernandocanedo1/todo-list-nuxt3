@@ -1,12 +1,21 @@
-## Install the deps
+Desenvolvido em Nuxt3 utilizando Vuetify, Pinia e Cypress.
+
+## Instale o gerenciador de pacotes:
 
 ```bash
-npm install
+yarn
 ```
 
-## Run the app
+## Inicia a aplicação
 
 ```bash
-npm run dev
+yarn dev
 ```
+## Iniciar testes de componentes
 
+```bash
+npx cypress open
+```
+## Deploy: 
+
+<https://todolist-sigma-bay.vercel.app/>
