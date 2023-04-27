@@ -9,7 +9,7 @@
           <div :class="[
               'text-overline mb-1 ',
               card.checked ? 'checked-true' : ''
-            ]" v-if="card.checked == true">TAREFA COMPLETA</div>
+            ]" v-if="card.checked == true">TAREFA CONCLUIDA</div>
           <div class="text-overline mb-1" v-else>TAREFA EM ANDAMENTO</div>
           <div class="text-h4 mb-1">{{ card.name }}</div>
           <div class="text-caption text-h2 line-clamp-2">{{ card.description }}</div>
