@@ -10,14 +10,15 @@
       required
     />
     <v-btn
+      prepend-icon="mdi-check-circle"
       color="sucess"
       type="submit"
       :disabled="!isFormValid"
       @click="myFunction()"
-      size="x-large"
+      size="large"
       >Adicionar Tarefa</v-btn
     >
-  </form>
+    </form>
   <Toast
     msg="Tarefa adicionada com sucesso!"
     link="<NuxtLink to='/'><h2>Clique para voltar</h2></NuxtLink>"
