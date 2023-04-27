@@ -11,6 +11,7 @@ export const useCardStore = defineStore({
         items.push({ name: item.name, description: item.description || '', checked: item.checked || false })
         return items
       }, [] as Array<{ name: string; description: string; checked: boolean }>),
+    getItemByIndex: (state) => (index: number) => state.tasks[index],
   },
   actions: {
     addItem(name: string, description: string = '', checked: boolean = false) {
