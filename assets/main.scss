@@ -116,14 +116,13 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
 }
-
 #snackbar {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: green;
+  background-color: #3cb371;
   color: #fff;
   text-align: center;
   border-radius: 25px 25px 0px 0px;
