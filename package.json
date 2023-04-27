@@ -18,7 +18,9 @@
     "vuetify": "^3.1.15"
   },
   "dependencies": {
+    "@model-w/toast": "^0.2.4",
     "@pinia/nuxt": "^0.4.9",
+    "bootstrap": "^5.2.3",
     "pinia": "^2.0.35",
     "vite-plugin-vuetify": "^1.0.2"
   }

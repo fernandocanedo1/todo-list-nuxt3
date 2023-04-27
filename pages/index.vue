@@ -4,10 +4,10 @@
       max-width="200px" 
       v-for="(cards, index) in card.items.slice().reverse()" :key="cards.name" 
       cols="12" 
-      md="4" 
+      md="3" 
       g="3"
     >
-      <CardTask :card=cards :indexCard="numTasks-index-1" />
+      <CardTask :card=cards :indexCard="numTasks-index-1" :numTask="numTasks"/>
     </v-col>
   </v-row>
 </template>

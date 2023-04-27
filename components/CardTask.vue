@@ -4,7 +4,7 @@
       :class="card.checked ? 'checked-true' : ''" hide-details>
     </v-checkbox>
     <v-card-item>
-      <NuxtLink :to="'/task/'+indexCard">
+      <NuxtLink :to="'/task/' + indexCard">
         <div>
           <div :class="[
               'text-overline mb-1 ',
@@ -12,15 +12,17 @@
             ]" v-if="card.checked == true">TAREFA COMPLETA</div>
           <div class="text-overline mb-1" v-else>TAREFA EM ANDAMENTO</div>
           <div class="text-h4 mb-1">{{ card.name }}</div>
-          <div class="text-caption line-clamp-2">{{ card.description }}</div>
+          <div class="text-caption text-h2 line-clamp-2">{{ card.description }}</div>
         </div>
       </NuxtLink>
     </v-card-item>
     <v-card-actions class="d-flex justify-end">
-      <!-- <v-btn variant="outlined"> Button </v-btn> -->
-      <v-btn text @click="task.removeItem(card.name)">Delete</v-btn>
+      <v-btn text @click="removeItem()">Delete</v-btn>
     </v-card-actions>
   </v-card>
+  <div id="snackbar">
+    Tarefa deletada!<br>
+  </div>
 </template>
 <script>
 import { useCardStore } from "/stores/card.ts";
@@ -28,10 +30,19 @@ export default defineComponent({
   props: {
     card: Object,
     indexCard: Number,
+    numTask: Number,
   },
   setup() {
     const task = useCardStore();
     return { task }
+  },
+  methods: {
+    removeItem() {
+      this.task.removeItem(this.card.name)
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
+    }
   },
 });
 </script>
